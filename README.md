@@ -23,9 +23,9 @@ Testing
 
   
 ## Models/ Algorithm
-- *BERT*: BertForSequenceClassification model is used to perform binary classification task (finetuning)  
-- *ElMo*: Binary classification task is performed to finetune the model on our data. The embedding layer is extracted for later use after finteuning.  
-- *BiLSTM Autoencoder*: Not a classification task. Training the model to generate embeddings. It features an Encoder and Decoder. The Encoder transforms incoming sequences into embeddings (utilizing Embedding and BiLSTM layers), and post-training, only the Encoder is used.
+- *BERT*: BertForSequenceClassification model is used to perform binary classification task (finetuning) [Finteune](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/BERT_Training.ipynb) & [Evaluation](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/BERT_Evaluation.ipynb) 
+- *ElMo*: Binary classification task is performed to finetune the model on our data. The embedding layer is extracted for later use after finteuning. [Finteune](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/Elmo_Training.ipynb) & [Evaluation](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/ELMo_Evaluation.ipynb) 
+- *BiLSTM Autoencoder*: Not a classification task. Training the model to generate embeddings. It features an Encoder and Decoder. The Encoder transforms incoming sequences into embeddings (utilizing Embedding and BiLSTM layers), and post-training, only the Encoder is used. [Training](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/BiLSTM_Autoencoder_Training.ipynb) & [Evaluation](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/blob/main/Code/BiLSTM_Autoencoder_Evaluation.ipynb)
 - *FAISS*: FAISS conducts similarity search between new and existing question embeddings in our data corpus.
 
     
@@ -37,7 +37,7 @@ Testing
 ![Cloud Infrastructure](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/aac90f89-1e4c-4c29-abbd-b1b85e611123)
 - The BERT - FAISS model shows the best results as per NDCG evaluation metric, hence only BERT is fine-tuned on more stackoverflow data (large dataset ~34M rows) on Bigquery table. The model is fine-tuned on a Virtual Machine, spun up on Vertex AI Workbench, that satisfied the GPU, RAM and hard disk requirements. Further, all model artifacts are stored on a google cloud storage bucket.
 - Apart from just training, Vertex AI workbench is also used for embeddings generation by the fine-tuned BERT model.
-- Finally, the fine-tuned model is stored in Model Registry in vertex AI and then deployed online via Vertex AI online predictions.
+- Finally, the fine-tuned model is stored in Model Registry in vertex AI and then deployed online via Vertex AI online predictions. 
 
  ## Final Product 
 ![Picture1](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/429a39aa-1e80-40c8-8e48-13faab6357b6)
