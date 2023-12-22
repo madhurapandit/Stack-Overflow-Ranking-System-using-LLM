@@ -9,9 +9,11 @@ We utilize NLP through transfer learning with pre-trained LLM models such as BER
 
 ## Methodology
 Training
+
 ![Train workflow](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/9d3ac02e-2251-4323-954f-6e1baa55853a)
 
 Testing
+
 ![Test workflow](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/327b24a2-bcf5-42bd-8659-eefd85af6507)
 
 
