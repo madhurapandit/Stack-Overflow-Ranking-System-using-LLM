@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>StackBot</title>
+  <style>
+    body {
+      background-image: url('https://stackbot-app--swethasubraman7.repl.co/static/background.jpg');
+      /* Set the path to your image */
+      background-size: cover;
+      /* This will make the image cover the entire background */
+      background-repeat: no-repeat;
+      /* Prevent the image from repeating */
+      font-family: Arial;
+    }
+
+    #para {
+      background-color: #00000061;
+      /* Here, '0.3' sets the opacity */
+      padding: 10px;
+    }
+
+    .slack-app {
+      display: flex;
+      flex-direction: row;
+      padding: 20px;
+      width: auto;
+      flex-grow: 1;
+    }
+
+    .split {
+      display: flex;
+      flex-direction: row;
+    }
+
+    #right-side {
+      padding-left: 20px;
+      flex-grow: 1;
+    }
+
+    #left-side {
+      min-width: 700px;  
+      max-width: 700px;
+      margin-left: 30px;
+    }
+
+    .app-image {
+      max-width: 460px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-family: Arial;
+      font-weight: bold;
+      color: #000;
+      text-align: center;
+      padding:20px;
+      margin-bottom: 20px;
+    }
+
+    #image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 10px;
+      font-size :20px;
+      font-family: Arial;
+      font-weight: normal;
+      color: #fff;
+      text-align: justify;
+    }
+
+    .para-content {
+      font-size: 18px;
+      font-weight: lighten;
+      color: #fff;
+      text-align: justify;
+    }
+
+    p {
+      font-size: 17px;
+      font-weight: 500;
+      color: #000;
+      text-align: justify;
+    }
+
+    #slack-bot-app {
+      max_width: 720px;
+      margin: auto;
+    }
+
+    /* Styling for the response area at the top */
+    #response-area {
+      display: none;
+      width: 90%;
+    }
+
+    #response-area div {
+      background-color: #c9d4cfd1; /* Background color for the response area */
+      color: #000;
+      font-size: 17px;
+      font-weight: 500;
+      border: 1px solid #000;
+      padding: 20px;
+      margin-top: 5px;
+    }
+
+    #chat {
+      display: none;
+      background-color: #d2d6d8cf; /* Background color for the question */
+      border: 1px solid #000;
+      padding: 10px;
+      width:90%;
+      margin-bottom:15px;
+    }
+
+    #chat div {
+      color: #000;
+      font-weight: 500;
+      font-size: 17px;
+    }
+
+    /* Styling for the input box at the bottom */
+    #input-box {
+      bottom: 10px;
+      width: 80%;
+      padding: 10px;
+      background-color: #ffffff;
+      /* Background color for the input box */
+      margin-bottom:20px
+    }
+
+    /* Styling for the input element inside the input box */
+    #user-input {
+      width: 80%;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body class='container-fliud'>
+  <div id="slack-bot-app">
+    <h1>StackBot - Question Answering Assistant</h1>
+    <div class='split'>
+      <div id='left-side'>
+        <div class="app-image">
+          <img id="image" src="https://stackbot-app--swethasubraman7.repl.co/static/image.jpg">
+        </div>
+        <div id='para'>
+          <h3>About StackBot</h3>
+          <p class="para-content">Stack Bot in action, answering questions and solving coding conundrums.
+            <br> <b>The Power of Stack Bot</b>.
+            <br>Stack Bot is not your average chatbot; it's a dedicated Stack Overflow guru. Here's what it brings to the table:
+            <br> 1. <b> Instant Answers</b>: Stack Bot swiftly fetches relevant answers and solutions from Stack Overflow's treasure trove of knowledge.
+            
+            <br> 2. <b> Code Assistance</b>: It helps you write, troubleshoot, and refine code snippets with its intelligent code suggestions.</p>
+            <p class="para-content">
+            <br>Stack Bot's user interface is designed with simplicity and efficiency in mind. The clean, modern design ensures that you can focus on what truly matters: getting your questions answered and your code improved.
+            <br>It combs through the Stack Overflow database, applies natural language processing, and delivers precise answers and solutions right to your fingertips.
+            <br> <b> GET STARTED WITH STACKBOT!!! LET THE CODING ADVENTURE BEGIN!! </b></p>
+        </div>
+      </div>
+      <div id='right-side'>
+        <!-- Input box at the bottom -->
+        <div class='footer' id="input-box">
+          <input type="text" id="user-input" placeholder="Type the question here..." onkeyup=''>
+          <button id="send-button" class="btn btn-primary">Send</button>
+        </div>
+        <div id="chat" class="hidden">
+          <!-- Chat messages will be displayed here -->
+        </div>
+          <!-- Response area at the top -->
+            <div id="response-area" class="hidden">
+            
+              <!-- You can display responses here using JavaScript -->
+            </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="static/frontend.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css" />
+
+</html>
