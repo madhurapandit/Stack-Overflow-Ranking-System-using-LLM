@@ -33,5 +33,16 @@ Testing
 - The ranking evaluation of the embeddings by three embedding models in combination with FAISS is given below.
 ![NDCG Results](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/3473eed7-c5e0-48a7-89ee-67fc7d041917)
 
+## Scaling on Google Cloud Platform
+![Cloud Infrastructure](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/aac90f89-1e4c-4c29-abbd-b1b85e611123)
+- The BERT - FAISS model shows the best results as per NDCG evaluation metric, hence only BERT is fine-tuned on more stackoverflow data (large dataset ~34M rows) on Bigquery table. The model is fine-tuned on a Virtual Machine, spun up on Vertex AI Workbench, that satisfied the GPU, RAM and hard disk requirements. Further, all model artifacts are stored on a google cloud storage bucket.
+- Apart from just training, Vertex AI workbench is also used for embeddings generation by the fine-tuned BERT model.
+- Finally, the fine-tuned model is stored in Model Registry in vertex AI and then deployed online via Vertex AI online predictions.
+
+ ## Final Product 
+![Picture1](https://github.com/swethasubu93/Stack-Overflow-Ranking-using-LLM/assets/109064336/429a39aa-1e80-40c8-8e48-13faab6357b6)
+- This is the final front-end application for the entire project - where user can interact with the model to get a response. 
+
+
 
 
