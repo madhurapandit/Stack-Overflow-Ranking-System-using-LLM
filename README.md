@@ -1,5 +1,5 @@
 
-# Stack Overflow Ranking Sustems for Solutiosn using Large Language Models
+# Stack Overflow Ranking Systems for Solutions using Large Language Models
 This project aims to create a search engine that aggregates accurate technical solutions from Stack Overflow, streamlining the process for programmers and enthusiasts.
 
 
